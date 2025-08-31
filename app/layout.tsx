@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { getAllTopics } from "../lib/posts";
-import { Sidebar } from "@/components/Sidebar";
+import { Sidebar } from "../components/Sidebar";
 
 export const metadata: Metadata = {
   title: "Portfolio | Blog | CV",
