@@ -1,15 +1,10 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "lib": [
-      "ES2022",
-      "DOM",
-      "DOM.Iterable"
-    ],
-    "module": "ESNext",
+    "types": ["node", "react", "react-dom"],
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "jsx": "preserve",
     "moduleResolution": "Bundler",
     "strict": true,
-    "jsx": "preserve",
     "incremental": true,
     "noUncheckedIndexedAccess": true,
     "resolveJsonModule": true,

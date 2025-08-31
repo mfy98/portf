@@ -1,6 +1,6 @@
 {
   "name": "my-portfolio",
-  "type": "module", 
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3000",
@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.12",
-    "@types/node": "20.14.12",
+    "@types/node": "^20.19.11",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",
     "postcss": "^8.5.6",
