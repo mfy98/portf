@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+/* Light theme tokens */
+:root{
+  --bg:#f8fafc; --surface:#ffffff; --text:#0f172a; --muted:#475569;
+  --link:#2563eb; --accent:#16a34a; --border:#e2e8f0; --chip:#ffffff;
+}
+
+/* base */
+*{box-sizing:border-box}
+html,body{padding:0;margin:0}
+body{
+  background:var(--bg); color:var(--text);
+  font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,Noto Sans,"Apple Color Emoji","Segoe UI Emoji";
+  font-size:17px;
+}
+
+/* layout */
+.shell{display:grid; grid-template-columns:260px 1fr; min-height:100vh}
+.sidebar{
+  position:sticky; top:0; align-self:start; height:100vh;
+  display:flex; flex-direction:column; gap:.75rem;
+  padding:1rem; border-right:1px solid var(--border); background:#fff;
+}
+.main{padding:2rem 1.25rem}
+.container{max-width:960px;margin:0 auto}
+
+/* sidebar links */
+.brand{font-weight:800; letter-spacing:.2px; font-size:1.05rem}
+.side-heading{margin-top:.5rem; font-weight:700; color:#334155; font-size:.9rem}
+.side-group{display:flex; flex-direction:column; gap:.25rem}
+.side-link{padding:.5rem .6rem; border-radius:10px; color:var(--text); text-decoration:none}
+.side-link:hover{background:#f1f5f9}
+.side-link.active{background:#e2e8f0}
+.side-link.sm{font-size:.95rem}
+
+/* cards & misc */
+.grid{display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{
+  background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:1rem;
+  box-shadow:0 1px 2px rgba(2,6,23,.06); transition:transform .15s, box-shadow .15s, border-color .15s;
+}
+.card:hover{transform:translateY(-2px); box-shadow:0 6px 20px rgba(2,6,23,.08); border-color:#dbeafe}
+.footer{padding:1rem 1.25rem; border-top:1px solid var(--border); opacity:.8}
+
+/* typography */
+.h1{font-size:clamp(32px,2.8vw,46px); line-height:1.12; margin:0 0 .6rem}
+.h2{font-size:1.34rem; margin:.2rem 0 .4rem}
+.muted{color:var(--muted)}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+
+/* prose (daha büyük, daha okunur) */
+.prose{line-height:1.9; font-size:1.08rem}
+.prose h2{
+  font-size:1.35rem; margin-top:1.4rem; padding-bottom:.2rem;
+  border-bottom:2px solid #e2e8f0;
+}
+.prose h3{font-size:1.05rem; margin-top:1rem}
+
+/* tabs */
+.tag{font-size:.8rem; padding:.2rem .5rem; border:1px solid var(--border); border-radius:999px; color:#0f172a; background:#fff}
+.tabs{display:flex; gap:.4rem; border-bottom:1px solid var(--border); margin:.75rem 0 1rem}
+.tab{display:inline-block; padding:.45rem .8rem; border:1px solid transparent; border-radius:999px; text-decoration:none; color:#0f172a}
+.tab:hover{background:#f1f5f9}
+.tab.active{border-color:#bfdbfe; background:#e0f2fe}
+
+/* chips/badges (CV) */
+.badge{
+  display:inline-block; padding:.3rem .65rem; border-radius:999px; font-weight:600;
+  border:1px solid var(--border); font-size:.82rem;
+}
+.chip{
+  display:inline-flex; align-items:center; gap:.45rem; padding:.4rem .7rem; border-radius:999px;
+  background:var(--chip); color:var(--text); border:1px solid var(--border); font-weight:600; text-decoration:none;
+}
+.chip:hover{border-color:#bfdbfe; box-shadow:0 0 0 3px #dbeafe}
+
+/* CV hero */
+.cv-hero{
+  position:relative; overflow:hidden; border-radius:18px; padding:1.25rem 1.25rem 1rem;
+  background:linear-gradient(180deg,#ffffff 0%, #f6f8fb 100%);
+  border:1px solid var(--border);
+}
+.cv-name{font-size:clamp(34px,3vw,52px); line-height:1.05; margin:0}
+.cv-subtitle{color:#334155; margin:.2rem 0 0}
+.cv-row{display:flex; flex-wrap:wrap; gap:.55rem; margin-top:.8rem}
+
+/* Renkli badge varyantları (pastel tonlar) */
+.badge-var--1{background:#f0f9ff; border-color:#bae6fd; color:#0c4a6e}   /* sky */
+.badge-var--2{background:#f0fdf4; border-color:#bbf7d0; color:#14532d}   /* green */
+.badge-var--3{background:#fdf2f8; border-color:#fbcfe8; color:#831843}   /* pink */
+.badge-var--4{background:#fefce8; border-color:#fde68a; color:#713f12}   /* yellow */
+.badge-var--5{background:#f5f3ff; border-color:#ddd6fe; color:#4c1d95}   /* violet */
+.badge-var--6{background:#fff1f2; border-color:#fecdd3; color:#9f1239}   /* rose */
+.badge-var--7{background:#ecfeff; border-color:#a5f3fc; color:#164e63}   /* cyan */
+.badge-var--8{background:#f1f5f9; border-color:#cbd5e1; color:#0f172a}   /* slate */
