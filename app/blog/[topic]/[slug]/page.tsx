@@ -1,11 +1,8 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { BlogTabs } from "@/components/BlogTabs";
-import {
-  getAllTopics,
-  getAllSlugsByTopic,
-  getPostByTopicSlug,
-} from "@/lib/posts";
+import { getAllTopics, getAllSlugsByTopic, getPostByTopicSlug } from "../../../../lib/posts";
+
 
 type Params = { topic: string; slug: string };
 
